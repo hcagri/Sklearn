@@ -11,7 +11,7 @@ print(df.head())
 # outcomes are Wins, Losses, Winnings, Raking
 
 
-# perform exploratory analysis :
+# perform exploratory analysis
 
 plt.scatter(df["BreakPointsOpportunities"],df["Winnings"],alpha=0.4)
 plt.xlabel("Break Points Opportunities")
@@ -26,7 +26,7 @@ plt.title("Analysis 2 ")
 plt.show()
 
 
-# perform single feature linear regressions :
+# perform single feature linear regressions 
 X = df["DoubleFaults"]
 X = X.values.reshape(-1,1)
 y = df["Losses"]
@@ -50,7 +50,7 @@ plt.show()
 
 print('Predicting Losses with DoubleFaults Test Score:', single_reg.score(X_test,y_test))
 
-## perform two feature linear regressions here:
+## perform two feature linear regression
 
 
 X = df[["BreakPointsOpportunities", "DoubleFaults"]]
@@ -69,7 +69,7 @@ plt.title("Linear Regression with 2 variable")
 plt.show()
 print('Predicting Winnings with BreakPointsOpportunities and DoubleFaults Test Score:', two_reg.score(X_test,y_test))
 
-## perform multiple feature linear regressions here:
+## perform multiple feature linear regressions
 
 
 X = df.iloc[:,2:20]
@@ -88,7 +88,7 @@ plt.title("The predictions vs actual test values for multiple linear Regression 
 plt.show()
 print('Predicting Winnings with Multi Features Test Score:', multi_reg.score(X_test,y_test))
 
-## perform multiple feature linear regressions here:
+## perform multiple feature linear regressions
 
 
 X = df.iloc[:,2:20]
